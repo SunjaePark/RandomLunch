@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CBAB6317B85E17002FC770 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CBAB6217B85E17002FC770 /* libsqlite3.dylib */; };
 		575E668517B46194008990C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668417B46194008990C3 /* UIKit.framework */; };
 		575E668717B46194008990C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668617B46194008990C3 /* Foundation.framework */; };
 		575E668917B46194008990C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668817B46194008990C3 /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CBAB6217B85E17002FC770 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		575E668117B46194008990C3 /* RandomLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575E668417B46194008990C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		575E668617B46194008990C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CBAB6317B85E17002FC770 /* libsqlite3.dylib in Frameworks */,
 				575E668517B46194008990C3 /* UIKit.framework in Frameworks */,
 				575E668717B46194008990C3 /* Foundation.framework in Frameworks */,
 				575E668917B46194008990C3 /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +54,7 @@
 		575E667817B46194008990C3 = {
 			isa = PBXGroup;
 			children = (
+				01CBAB6217B85E17002FC770 /* libsqlite3.dylib */,
 				575E668A17B46194008990C3 /* RandomLunch */,
 				575E668317B46194008990C3 /* Frameworks */,
 				575E668217B46194008990C3 /* Products */,
@@ -280,6 +284,7 @@
 				575E66A017B46194008990C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
