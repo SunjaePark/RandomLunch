@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 016118F717B9AA620051CDE3 /* RandomLunchDB.db */; };
+		016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */ = {isa = PBXBuildFile; fileRef = 016118FA17B9AC320051CDE3 /* RestaurantData.m */; };
 		01CBAB6317B85E17002FC770 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CBAB6217B85E17002FC770 /* libsqlite3.dylib */; };
 		575E668517B46194008990C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668417B46194008990C3 /* UIKit.framework */; };
 		575E668717B46194008990C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668617B46194008990C3 /* Foundation.framework */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		016118F717B9AA620051CDE3 /* RandomLunchDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = RandomLunchDB.db; sourceTree = SOURCE_ROOT; };
+		016118F917B9AC320051CDE3 /* RestaurantData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantData.h; sourceTree = "<group>"; };
+		016118FA17B9AC320051CDE3 /* RestaurantData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantData.m; sourceTree = "<group>"; };
 		01CBAB6217B85E17002FC770 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		575E668117B46194008990C3 /* RandomLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575E668417B46194008990C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016118FC17B9AC520051CDE3 /* RestaurantData */ = {
+			isa = PBXGroup;
+			children = (
+				016118F917B9AC320051CDE3 /* RestaurantData.h */,
+				016118FA17B9AC320051CDE3 /* RestaurantData.m */,
+			);
+			name = RestaurantData;
+			sourceTree = "<group>";
+		};
 		575E667817B46194008990C3 = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +96,10 @@
 		575E668A17B46194008990C3 /* RandomLunch */ = {
 			isa = PBXGroup;
 			children = (
-				016118F717B9AA620051CDE3 /* RandomLunchDB.db */,
 				575E669317B46194008990C3 /* AppDelegate.h */,
 				575E669417B46194008990C3 /* AppDelegate.m */,
 				575E668B17B46194008990C3 /* Supporting Files */,
+				016118FC17B9AC520051CDE3 /* RestaurantData */,
 			);
 			path = RandomLunch;
 			sourceTree = "<group>";
@@ -95,6 +107,7 @@
 		575E668B17B46194008990C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				016118F717B9AA620051CDE3 /* RandomLunchDB.db */,
 				575E668C17B46194008990C3 /* RandomLunch-Info.plist */,
 				575E668D17B46194008990C3 /* InfoPlist.strings */,
 				575E669017B46194008990C3 /* main.m */,
@@ -174,6 +187,7 @@
 			files = (
 				575E669117B46194008990C3 /* main.m in Sources */,
 				575E669517B46194008990C3 /* AppDelegate.m in Sources */,
+				016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
