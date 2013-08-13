@@ -7,15 +7,27 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTableViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //storyboard 이용.
+    
+    
+    NSString *restaurant1 = [NSString new];
+    NSString *restaurant2 = [NSString new];
+    
+    restaurant1 = @"hello";
+    restaurant2 = @"world";
+    
+    NSArray *testArray = [NSMutableArray arrayWithObjects:restaurant1, restaurant2, nil];
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    RootTableViewController *tableViewController = navigationController.viewControllers[0];
+    
+    tableViewController.restaurants = [testArray mutableCopy];
     return YES;
 }
 
