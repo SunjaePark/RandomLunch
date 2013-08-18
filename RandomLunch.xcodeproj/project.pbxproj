@@ -104,13 +104,10 @@
 				575E669317B46194008990C3 /* AppDelegate.h */,
 				575E669417B46194008990C3 /* AppDelegate.m */,
 				575E668B17B46194008990C3 /* Supporting Files */,
-<<<<<<< HEAD
 				F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */,
 				F8572A3C17B85F1900CE4602 /* RootTableViewController.h */,
 				F8572A3D17B85F1900CE4602 /* RootTableViewController.m */,
-=======
 				016118FC17B9AC520051CDE3 /* RestaurantData */,
->>>>>>> master
 			);
 			path = RandomLunch;
 			sourceTree = "<group>";
@@ -185,11 +182,8 @@
 				575E669717B46194008990C3 /* Default.png in Resources */,
 				575E669917B46194008990C3 /* Default@2x.png in Resources */,
 				575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */,
-<<<<<<< HEAD
 				F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */,
-=======
 				016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */,
->>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,11 +196,8 @@
 			files = (
 				575E669117B46194008990C3 /* main.m in Sources */,
 				575E669517B46194008990C3 /* AppDelegate.m in Sources */,
-<<<<<<< HEAD
 				F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */,
-=======
 				016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */,
->>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
