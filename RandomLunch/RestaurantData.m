@@ -10,12 +10,15 @@
 
 @implementation RestaurantData
 
-- (id)initWithData:(NSInteger)Index Title:(NSString*)Name Content:(NSString*)Number Date:(NSString*)Memo {
+- (id)initWithData:(NSInteger)index name:(NSString*)name number:(NSString*)number memo:(NSString*)memo
+{
 	
-    self.rIndex = Index;
-    self.rName = Name;
-    self.rNumber = Number;
-    self.rMemo = Memo;
+    if (self = [super init]) {
+        self.index = index;
+        self.name = name;
+        self.number = number;
+        self.memo = memo;
+    }
     
 	return self;
 }

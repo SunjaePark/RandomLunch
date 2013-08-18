@@ -9,18 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface RestaurantData : NSObject
-{
-	NSInteger rIndex;
-	NSString *rName;
-	NSString *rNumber;
-	NSString *rMemo;
-}
 
-@property (nonatomic, assign) NSInteger rIndex;
-@property (nonatomic, retain) NSString *rName;
-@property (nonatomic, retain) NSString *rNumber;
-@property (nonatomic, retain) NSString *rMemo;
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *number;
+@property (nonatomic, strong) NSString *memo;
 
-- (id)initWithData:(NSInteger)Index Title:(NSString*)Name Content:(NSString*)Number Date:(NSString*)Memo;
+- (id)initWithData:(NSInteger)index name:(NSString*)name number:(NSString*)number memo:(NSString*)memo;
 
 @end
