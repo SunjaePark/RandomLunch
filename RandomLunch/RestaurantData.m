@@ -10,7 +10,7 @@
 
 @implementation RestaurantData
 
-- (id)initWithData:(NSInteger)index name:(NSString*)name number:(NSString*)number memo:(NSString*)memo
+- (id)initWithIndex:(NSInteger)index name:(NSString*)name number:(NSString*)number memo:(NSString*)memo
 {
 	
     if (self = [super init]) {

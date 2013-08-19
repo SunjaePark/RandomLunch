@@ -7,6 +7,7 @@
 //
 
 #import "RootTableViewController.h"
+#import "RestaurantData.h"
 
 @interface RootTableViewController ()
 
@@ -31,20 +32,23 @@
     self.clearsSelectionOnViewWillAppear = NO;
     
     //random으로 식당을 보여주는 버튼.
-//    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(randomLunch)];
-//    UIBarButtonItem *addRestaurant = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(addRestaurant)];
-//    
-//    self.navigationItem.rightBarButtonItem = addRestaurant;
-//    self.navigationItem.leftBarButtonItem = randomLunch;
+    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(randomLunch)];
+    UIBarButtonItem *addRestaurant = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(addRestaurant)];
+
+    self.navigationItem.rightBarButtonItem = addRestaurant;
+    self.navigationItem.leftBarButtonItem = randomLunch;
 }
 
 //- (void)randomLunch
 //{
+//    //random으로 식당골라서 그 정보를 띄우기.
 //    
 //}
 //
 //- (void) addRestaurants
 //{
+//    RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2 name:@"No name" number:@"00-000-0000" memo:@"No memo"];
+//    
 //    
 //}
 
@@ -68,7 +72,7 @@
 {
     
     // Return the number of rows in the section.
-    return self.restaurants.count;
+    return self.restaurantsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,7 +81,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *test = self.restaurants[indexPath.row];
+    NSString *test = self.restaurantsArray[indexPath.row];
     cell.textLabel.text = test;
     return cell;
 }

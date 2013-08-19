@@ -13,14 +13,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="lqE-tH-feL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="lqE-tH-feL">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="fn4-O8-uAv" kind="push" identifier="DetailOfRestqurant" id="zcZ-2M-iaq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,13 +32,160 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="AZn-MA-nIs">
-                        <barButtonItem key="leftBarButtonItem" title="Random!" id="9vf-od-EXl"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="5Xd-p1-6Jq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Random!" id="9vf-od-EXl">
+                            <connections>
+                                <segue destination="lpQ-SP-hc4" kind="push" identifier="RandomRestaurant" id="iTC-TJ-RiE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="5Xd-p1-6Jq">
+                            <connections>
+                                <segue destination="dYw-tz-JDB" kind="push" identifier="AddRestaurant" id="ydc-jA-yCw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGA-Og-uX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="835" y="6"/>
+        </scene>
+        <!--Detail View Controller - Restaurant-->
+        <scene sceneID="tPg-22-cqV">
+            <objects>
+                <viewController id="fn4-O8-uAv" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vVQ-WF-nbg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xka-xu-Zad">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="1HE-wW-k0C"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vol</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="restaurant's name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-js-Kr3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="5W0-RB-WZ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phone number" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-Wp-W2O">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fBj-js-Kr3" firstAttribute="leading" secondItem="xka-xu-Zad" secondAttribute="leading" type="default" id="C57-8l-L0t"/>
+                            <constraint firstAttribute="bottom" secondItem="3R7-Wp-W2O" secondAttribute="bottom" constant="102" id="D5s-RB-yfV"/>
+                            <constraint firstAttribute="trailing" secondItem="xka-xu-Zad" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="M6j-vR-dNd"/>
+                            <constraint firstAttribute="trailing" secondItem="fBj-js-Kr3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="N53-tc-o5M"/>
+                            <constraint firstItem="xka-xu-Zad" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="92" id="bAb-B8-XNd"/>
+                            <constraint firstItem="fBj-js-Kr3" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="48" id="bUG-cU-0l4"/>
+                            <constraint firstItem="xka-xu-Zad" firstAttribute="leading" secondItem="3R7-Wp-W2O" secondAttribute="leading" type="default" id="bu8-fw-14P"/>
+                            <constraint firstAttribute="trailing" secondItem="3R7-Wp-W2O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gv7-Hk-52P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Restaurant" id="ofR-C8-C3O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCx-dN-zFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="313"/>
+        </scene>
+        <!--Random Lunch View Controller - What's today's restaurant?-->
+        <scene sceneID="zYX-PJ-UC9">
+            <objects>
+                <viewController id="lpQ-SP-hc4" customClass="RandomLunchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9WW-b1-NAl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="restaurant's information." translatesAutoresizingMaskIntoConstraints="NO" id="Ivz-4a-l8f">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="ti2-pu-K4C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="restaurant's name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZj-XL-xU3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="cfQ-2R-gTR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phone number" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-O3-fAb">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HH4-O3-fAb" secondAttribute="bottom" constant="101" id="1AF-SQ-bxQ"/>
+                            <constraint firstItem="lZj-XL-xU3" firstAttribute="centerX" secondItem="9WW-b1-NAl" secondAttribute="centerX" type="default" id="BzI-Fc-Y1v"/>
+                            <constraint firstItem="lZj-XL-xU3" firstAttribute="trailing" secondItem="Ivz-4a-l8f" secondAttribute="trailing" type="default" id="Gd7-xf-aZ7"/>
+                            <constraint firstItem="HH4-O3-fAb" firstAttribute="leading" secondItem="Ivz-4a-l8f" secondAttribute="leading" type="default" id="R3P-io-qd7"/>
+                            <constraint firstItem="HH4-O3-fAb" firstAttribute="trailing" secondItem="Ivz-4a-l8f" secondAttribute="trailing" type="default" id="afk-0R-Nwn"/>
+                            <constraint firstItem="lZj-XL-xU3" firstAttribute="leading" secondItem="Ivz-4a-l8f" secondAttribute="leading" type="default" id="gkV-nS-kUG"/>
+                            <constraint firstItem="lZj-XL-xU3" firstAttribute="top" secondItem="9WW-b1-NAl" secondAttribute="top" constant="49" id="lx9-6U-yue"/>
+                            <constraint firstItem="Ivz-4a-l8f" firstAttribute="top" secondItem="9WW-b1-NAl" secondAttribute="top" constant="93" id="pxM-78-hB9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What's today's restaurant?" id="wME-qX-jaq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIk-gB-VFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-462"/>
+        </scene>
+        <!--Add View Controller - Adding a Restaurant-->
+        <scene sceneID="gxP-d2-gmC">
+            <objects>
+                <viewController id="dYw-tz-JDB" customClass="AddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TqB-lG-qz8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="restaurant's information." translatesAutoresizingMaskIntoConstraints="NO" id="lka-yA-qZY">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="NUJ-Kw-Cm0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="restaurant's name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-QL-64u">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Qhy-iA-kCW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phone number" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKG-PV-9ef">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fKG-PV-9ef" firstAttribute="trailing" secondItem="lka-yA-qZY" secondAttribute="trailing" type="default" id="2oP-kS-2mm"/>
+                            <constraint firstItem="fKG-PV-9ef" firstAttribute="leading" secondItem="lka-yA-qZY" secondAttribute="leading" type="default" id="I7Q-RL-pH6"/>
+                            <constraint firstAttribute="bottom" secondItem="fKG-PV-9ef" secondAttribute="bottom" constant="97" id="MsQ-lA-wC0"/>
+                            <constraint firstItem="dXu-QL-64u" firstAttribute="leading" secondItem="lka-yA-qZY" secondAttribute="leading" type="default" id="WVk-oP-41g"/>
+                            <constraint firstItem="lka-yA-qZY" firstAttribute="top" secondItem="TqB-lG-qz8" secondAttribute="top" constant="97" id="bn7-I1-TYh"/>
+                            <constraint firstItem="lka-yA-qZY" firstAttribute="trailing" secondItem="dXu-QL-64u" secondAttribute="trailing" type="default" id="dFF-GR-ruP"/>
+                            <constraint firstItem="lka-yA-qZY" firstAttribute="centerX" secondItem="TqB-lG-qz8" secondAttribute="centerX" type="default" id="vOx-eF-Pz1"/>
+                            <constraint firstItem="dXu-QL-64u" firstAttribute="top" secondItem="TqB-lG-qz8" secondAttribute="top" constant="53" id="yDh-wc-oGA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adding a Restaurant" id="5oc-W3-Qva"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vQ-p5-zSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="-87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sy6-c2-qAr">
@@ -57,6 +207,18 @@
         </scene>
     </scenes>
     <classes>
+        <class className="AddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RandomLunchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RandomLunchViewController.h"/>
+        </class>
         <class className="RootTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootTableViewController.h"/>
             <relationships>

@@ -22,12 +22,13 @@
     restaurant1 = @"hello";
     restaurant2 = @"world";
     
-    NSArray *testArray = [NSMutableArray arrayWithObjects:restaurant1, restaurant2, nil];
+    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     RootTableViewController *tableViewController = navigationController.viewControllers[0];
     
-    tableViewController.restaurants = [testArray mutableCopy];
+    tableViewController.restaurantsArray = [testArray mutableCopy];
+    
     return YES;
 }
 

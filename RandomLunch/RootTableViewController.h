@@ -10,6 +10,6 @@
 
 @interface RootTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray* restaurants;
+@property (strong, nonatomic) NSMutableArray* restaurantsArray;
 
 @end

@@ -19,6 +19,9 @@
 		575E669717B46194008990C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669617B46194008990C3 /* Default.png */; };
 		575E669917B46194008990C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669817B46194008990C3 /* Default@2x.png */; };
 		575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669A17B46194008990C3 /* Default-568h@2x.png */; };
+		F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F807C3FD17C2102A00CCE430 /* DetailViewController.m */; };
+		F80D441117C2DB590063D5EF /* RandomLunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D441017C2DB590063D5EF /* RandomLunchViewController.m */; };
+		F80D441417C2DBB80063D5EF /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D441317C2DBB80063D5EF /* AddViewController.m */; };
 		F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */; };
 		F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8572A3D17B85F1900CE4602 /* RootTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,12 @@
 		575E669617B46194008990C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		575E669817B46194008990C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		575E669A17B46194008990C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F807C3FC17C2102A00CCE430 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F807C3FD17C2102A00CCE430 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F80D440F17C2DB590063D5EF /* RandomLunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomLunchViewController.h; sourceTree = "<group>"; };
+		F80D441017C2DB590063D5EF /* RandomLunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomLunchViewController.m; sourceTree = "<group>"; };
+		F80D441217C2DBB80063D5EF /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		F80D441317C2DBB80063D5EF /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RandomLunchStroryBoard.storyboard; sourceTree = "<group>"; };
 		F8572A3C17B85F1900CE4602 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		F8572A3D17B85F1900CE4602 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
@@ -107,6 +116,7 @@
 				F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */,
 				F8572A3C17B85F1900CE4602 /* RootTableViewController.h */,
 				F8572A3D17B85F1900CE4602 /* RootTableViewController.m */,
+				F80D441517C2DBCA0063D5EF /* View */,
 				016118FC17B9AC520051CDE3 /* RestaurantData */,
 			);
 			path = RandomLunch;
@@ -125,6 +135,19 @@
 				575E669A17B46194008990C3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F80D441517C2DBCA0063D5EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F807C3FC17C2102A00CCE430 /* DetailViewController.h */,
+				F807C3FD17C2102A00CCE430 /* DetailViewController.m */,
+				F80D440F17C2DB590063D5EF /* RandomLunchViewController.h */,
+				F80D441017C2DB590063D5EF /* RandomLunchViewController.m */,
+				F80D441217C2DBB80063D5EF /* AddViewController.h */,
+				F80D441317C2DBB80063D5EF /* AddViewController.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +221,9 @@
 				575E669517B46194008990C3 /* AppDelegate.m in Sources */,
 				F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */,
 				016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */,
+				F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */,
+				F80D441117C2DB590063D5EF /* RandomLunchViewController.m in Sources */,
+				F80D441417C2DBB80063D5EF /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
