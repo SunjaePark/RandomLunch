@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 016118F717B9AA620051CDE3 /* RandomLunchDB.db */; };
 		016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */ = {isa = PBXBuildFile; fileRef = 016118FA17B9AC320051CDE3 /* RestaurantData.m */; };
+		0181E8B417C37DC5004932CC /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0181E8B317C37DC5004932CC /* DataManager.m */; };
 		01CBAB6317B85E17002FC770 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CBAB6217B85E17002FC770 /* libsqlite3.dylib */; };
 		575E668517B46194008990C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668417B46194008990C3 /* UIKit.framework */; };
 		575E668717B46194008990C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E668617B46194008990C3 /* Foundation.framework */; };
@@ -30,6 +31,8 @@
 		016118F717B9AA620051CDE3 /* RandomLunchDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = RandomLunchDB.db; sourceTree = SOURCE_ROOT; };
 		016118F917B9AC320051CDE3 /* RestaurantData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantData.h; sourceTree = "<group>"; };
 		016118FA17B9AC320051CDE3 /* RestaurantData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantData.m; sourceTree = "<group>"; };
+		0181E8B217C37DC5004932CC /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		0181E8B317C37DC5004932CC /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		01CBAB6217B85E17002FC770 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		575E668117B46194008990C3 /* RandomLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575E668417B46194008990C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -110,6 +113,8 @@
 		575E668A17B46194008990C3 /* RandomLunch */ = {
 			isa = PBXGroup;
 			children = (
+				0181E8B217C37DC5004932CC /* DataManager.h */,
+				0181E8B317C37DC5004932CC /* DataManager.m */,
 				575E669317B46194008990C3 /* AppDelegate.h */,
 				575E669417B46194008990C3 /* AppDelegate.m */,
 				575E668B17B46194008990C3 /* Supporting Files */,
@@ -224,6 +229,7 @@
 				F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */,
 				F80D441117C2DB590063D5EF /* RandomLunchViewController.m in Sources */,
 				F80D441417C2DBB80063D5EF /* AddViewController.m in Sources */,
+				0181E8B417C37DC5004932CC /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
