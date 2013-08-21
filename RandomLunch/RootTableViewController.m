@@ -8,7 +8,6 @@
 
 #import "RootTableViewController.h"
 #import "DetailViewController.h"
-#import "RandomLunchViewController.h"
 #import "RestaurantData.h"
 
 @interface RootTableViewController ()
@@ -33,7 +32,7 @@
     self.clearsSelectionOnViewWillAppear = NO;
     
     //random으로 식당을 보여주는 버튼.
-    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                                  target:self
                                                                                  action:@selector(randomLunch)];
     //식당 추가하는 버튼
@@ -48,7 +47,16 @@
 - (void)randomLunch
 {
     //random으로 식당골라서 그 정보를 띄우기.
+    int randomIndex = 0;//rand함수 사용해서 random index 골라야함!
     
+    
+//    RestaurantData *newRestaurant =[self.restaurantsArray objectAtIndex:randomIndex];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(randomIndex) inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    [self performSegueWithIdentifier:@"DetailOfRestaurantSegue" sender:self];
 }
 
 - (void) addRestaurant
@@ -150,19 +158,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     RestaurantData *restaurantData = self.restaurantsArray[self.tableView.indexPathForSelectedRow.row];
-    
-    if ([segue.identifier isEqualToString: @"DetailOfRestaurantSegue"])
-    {
-        DetailViewController *restaurantDetailViewController = segue.destinationViewController;
-        restaurantDetailViewController.restaurant = restaurantData;
-    }
-    else if([segue.identifier isEqualToString: @"RandomRestaurantSegue"])
-    {
-        RandomLunchViewController *randomLunchViewController = segue.destinationViewController;
-        randomLunchViewController.restaurant = restaurantData;
-    }
-   
-    
+    DetailViewController *restaurantDetailViewController = segue.destinationViewController;
+    restaurantDetailViewController.restaurant = restaurantData;
 }
 
 @end
