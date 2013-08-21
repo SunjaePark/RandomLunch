@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootTableViewController.h"
+#import "RestaurantData.h"
 
 @implementation AppDelegate
 
@@ -29,11 +30,8 @@
 //    [dataManager getAllRowsFromTableNamed:@"Restaurant"];
 
     //storyboard 이용.
-    NSString *restaurant1 = [NSString new];
-    NSString *restaurant2 = [NSString new];
-    
-    restaurant1 = @"hello";
-    restaurant2 = @"world";
+    RestaurantData *restaurant1 = [[RestaurantData alloc]initWithIndex:1 name:@"KohranThai" number:@"02-123-1234" memo:@"Thai food restaurant"];
+    RestaurantData *restaurant2 = [[RestaurantData alloc]initWithIndex:1 name:@"GangNam Market" number:@"02-123-1234" memo:@"Korean Restaurant"];
     
     NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
     

@@ -7,6 +7,7 @@
 //
 
 #import "RandomLunchViewController.h"
+#import "RestaurantData.h"
 
 @interface RandomLunchViewController ()
 <UITextFieldDelegate, UINavigationControllerDelegate>
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.restaurantName.text = self.restaurant.name;
+    self.restaurantInformation.text = self.restaurant.memo;
+    self.restaurantPhoneNumber.text = self.restaurant.number;
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,7 +8,6 @@
 
 #import "RootTableViewController.h"
 #import "DetailViewController.h"
-#import "AddViewController.h"
 #import "RandomLunchViewController.h"
 #import "RestaurantData.h"
 
@@ -34,8 +33,13 @@
     self.clearsSelectionOnViewWillAppear = NO;
     
     //random으로 식당을 보여주는 버튼.
-    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(randomLunch)];
-    UIBarButtonItem *addRestaurant = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(addRestaurant)];
+    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+                                                                                 target:self
+                                                                                 action:@selector(randomLunch)];
+    //식당 추가하는 버튼
+    UIBarButtonItem *addRestaurant = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                   target:self
+                                                                                   action:@selector(addRestaurant)];
 
     self.navigationItem.rightBarButtonItem = addRestaurant;
     self.navigationItem.leftBarButtonItem = randomLunch;
@@ -47,7 +51,7 @@
     
 }
 
-- (void) addRestaurants
+- (void) addRestaurant
 {
     //db에 추가할 내용 필요.
     RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2
@@ -59,8 +63,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-    [self performSegueWithIdentifier:@"AddRestaurant" sender:self];
-    
+    [self performSegueWithIdentifier:@"DetailOfRestaurantSegue" sender:self];
 }
 
 
@@ -123,12 +126,12 @@
 */
 
 
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
+//// Override to support conditional rearranging of the table view.
+//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Return NO if you do not want the item to be re-orderable.
+//    return YES;
+//}
 
 
 #pragma mark - Table view delegate
@@ -152,11 +155,6 @@
     {
         DetailViewController *restaurantDetailViewController = segue.destinationViewController;
         restaurantDetailViewController.restaurant = restaurantData;
-    }
-    else if([segue.identifier isEqualToString: @"AddRestaurantSegue"])
-    {
-        AddViewController *addViewController = segue.destinationViewController;
-        addViewController.restaurant = restaurantData;       
     }
     else if([segue.identifier isEqualToString: @"RandomRestaurantSegue"])
     {
