@@ -7,10 +7,12 @@
 //
 
 #import "RootTableViewController.h"
+#import "DetailViewController.h"
+#import "AddViewController.h"
+#import "RandomLunchViewController.h"
 #import "RestaurantData.h"
 
 @interface RootTableViewController ()
-
 @end
 
 @implementation RootTableViewController
@@ -39,18 +41,27 @@
     self.navigationItem.leftBarButtonItem = randomLunch;
 }
 
-//- (void)randomLunch
-//{
-//    //random으로 식당골라서 그 정보를 띄우기.
-//    
-//}
-//
-//- (void) addRestaurants
-//{
-//    RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2 name:@"No name" number:@"00-000-0000" memo:@"No memo"];
-//    
-//    
-//}
+- (void)randomLunch
+{
+    //random으로 식당골라서 그 정보를 띄우기.
+    
+}
+
+- (void) addRestaurants
+{
+    //db에 추가할 내용 필요.
+    RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2
+                                                                    name:@"No name"
+                                                                  number:@"00-000-0000"
+                                                                    memo:@"No memo"];
+    [self.restaurantsArray addObject:newRestaurant];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    [self performSegueWithIdentifier:@"AddRestaurant" sender:self];
+    
+}
 
 
 
@@ -61,12 +72,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -81,33 +86,34 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *test = self.restaurantsArray[indexPath.row];
-    cell.textLabel.text = test;
-    return cell;
+    RestaurantData *restaurant = self.restaurantsArray[indexPath.row];
+    cell.textLabel.text = restaurant.name;
+    
+    return cell; 
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+        [self.restaurantsArray removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    } 
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -138,6 +144,27 @@
      */
 }
 
-- (IBAction)randomLunchButton:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    RestaurantData *restaurantData = self.restaurantsArray[self.tableView.indexPathForSelectedRow.row];
+    
+    if ([segue.identifier isEqualToString: @"DetailOfRestaurantSegue"])
+    {
+        DetailViewController *restaurantDetailViewController = segue.destinationViewController;
+        restaurantDetailViewController.restaurant = restaurantData;
+    }
+    else if([segue.identifier isEqualToString: @"AddRestaurantSegue"])
+    {
+        AddViewController *addViewController = segue.destinationViewController;
+        addViewController.restaurant = restaurantData;       
+    }
+    else if([segue.identifier isEqualToString: @"RandomRestaurantSegue"])
+    {
+        RandomLunchViewController *randomLunchViewController = segue.destinationViewController;
+        randomLunchViewController.restaurant = restaurantData;
+    }
+   
+    
 }
+
 @end

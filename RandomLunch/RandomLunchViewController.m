@@ -9,7 +9,7 @@
 #import "RandomLunchViewController.h"
 
 @interface RandomLunchViewController ()
-
+<UITextFieldDelegate, UINavigationControllerDelegate>
 @end
 
 @implementation RandomLunchViewController

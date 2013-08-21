@@ -9,7 +9,7 @@
 #import "AddViewController.h"
 
 @interface AddViewController ()
-
+<UITextFieldDelegate, UINavigationControllerDelegate>
 @end
 
 @implementation AddViewController

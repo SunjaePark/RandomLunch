@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
-
+<UITextFieldDelegate, UINavigationControllerDelegate>
 @end
 
 @implementation DetailViewController
