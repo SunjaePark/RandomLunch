@@ -8,39 +8,39 @@
 
 #import "AppDelegate.h"
 #import "RootTableViewController.h"
+#import "DataManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    DataManager *dataManager = [DataManager new];
-//    [dataManager openDB];
-//    [dataManager createTableNamed:@"Restaurant" withField1:@"name" withField2:@"number" withField3:@"memo"];
-//    NSString *name = @"KohranThai";
-//    NSString *number = @"010-8999-7677";
-//    NSString *memo = @"Thai Restaurant";
-//    
-//    NSString *name2 = @"GangNam Market";
-//    NSString *number2 = @"02-999-7677";
-//    NSString *memo2 = @"Korean Restaurant";
-//    
-//    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
-//    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
-//    [dataManager getAllRowsFromTableNamed:@"Restaurant"];
+    DataManager *dataManager = [DataManager new];
+    [dataManager openDB];
+    [dataManager createTableNamed:@"Restaurant" withField1:@"name" withField2:@"number" withField3:@"memo"];
+    NSString *name = @"KohranThai";
+    NSString *number = @"010-8999-7677";
+    NSString *memo = @"Thai Restaurant";
+    NSString *name2 = @"GangNam Market";
+    NSString *number2 = @"02-999-7677";
+    NSString *memo2 = @"Korean Restaurant";
 
-    //storyboard 이용.
-    NSString *restaurant1 = [NSString new];
-    NSString *restaurant2 = [NSString new];
+    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
+    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
     
-    restaurant1 = @"hello";
-    restaurant2 = @"world";
-    
-    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
-    
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    RootTableViewController *tableViewController = navigationController.viewControllers[0];
-    
-    tableViewController.restaurantsArray = [testArray mutableCopy];
+    [dataManager getAllRowsFromTableNamed:@"Restaurant"];
+//
+//    //storyboard 이용.
+//    NSString *restaurant1 = [NSString new];
+//    NSString *restaurant2 = [NSString new];
+//    
+//    restaurant1 = @"hello";
+//    restaurant2 = @"world";
+//    
+//    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
+//    
+//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    RootTableViewController *tableViewController = navigationController.viewControllers[0];
+//    tableViewController.restaurantsArray = [testArray mutableCopy];
     
     return YES;
 }
