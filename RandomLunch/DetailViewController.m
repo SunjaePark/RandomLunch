@@ -7,9 +7,10 @@
 //
 
 #import "DetailViewController.h"
+#import "RestaurantData.h"
 
 @interface DetailViewController ()
-
+<UITextFieldDelegate, UINavigationControllerDelegate>
 @end
 
 @implementation DetailViewController
@@ -27,6 +28,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.restaurantName.text = self.restaurant.name;
+    self.restaurantInformation.text = self.restaurant.memo;
+    self.restaurantPhoneNumber.text = self.restaurant.number;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.restaurant.name = self.restaurantName.text;
+    self.restaurant.memo = self.restaurantInformation.text;
+    self.restaurant.number = self.restaurantPhoneNumber.text;
+    
+    //수정된 내용 db에 update해야함.
 }
 
 - (void)didReceiveMemoryWarning
