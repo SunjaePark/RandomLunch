@@ -8,11 +8,8 @@
 
 #import "AppDelegate.h"
 #import "RootTableViewController.h"
-<<<<<<< HEAD
 #import "DataManager.h"
-=======
 #import "RestaurantData.h"
->>>>>>> 4cd303782d685b578cbb16cd6d60cba52cbdd743
 
 @implementation AppDelegate
 
@@ -28,22 +25,10 @@
     NSString *number2 = @"02-999-7677";
     NSString *memo2 = @"Korean Restaurant";
 
-<<<<<<< HEAD
     [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
     [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
-=======
-    //storyboard 이용.
-    RestaurantData *restaurant1 = [[RestaurantData alloc]initWithIndex:1 name:@"KohranThai" number:@"02-123-1234" memo:@"Thai food restaurant"];
-    RestaurantData *restaurant2 = [[RestaurantData alloc]initWithIndex:1 name:@"GangNam Market" number:@"02-123-1234" memo:@"Korean Restaurant"];
-    
-    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
-    
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    RootTableViewController *tableViewController = navigationController.viewControllers[0];
->>>>>>> 4cd303782d685b578cbb16cd6d60cba52cbdd743
-    
     [dataManager getAllRowsFromTableNamed:@"Restaurant"];
-//
+
 //    //storyboard 이용.
 //    NSString *restaurant1 = [NSString new];
 //    NSString *restaurant2 = [NSString new];
@@ -56,8 +41,8 @@
 //    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    RootTableViewController *tableViewController = navigationController.viewControllers[0];
 //    tableViewController.restaurantsArray = [testArray mutableCopy];
-    
-    return YES;
+//    
+//    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
