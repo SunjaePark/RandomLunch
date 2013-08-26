@@ -23,13 +23,13 @@
 - (void) openDB;
 
 //테이블 생성
-- (void) createTableNamed:(NSString *) tableName withField1:(NSString *) field1 withField2:(NSString *) field2 withField3:(NSString *) field3;
+- (void) createTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3;
 
 //레코드 삽입
 - (void) insertRecordIntoTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3 field1Value:(NSString *) field1Value field2Value:(NSString *) field2Value field3Value:(NSString *) field3Value;
 
 //레코드 가져오기
-- (void) getAllRowsFromTableNamed: (NSString *) tableName;
+- (void) allRowsFromTableNamed: (NSString *) tableName;
 
 
 //+ (id)defaultManager;
