@@ -15,6 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+<<<<<<< HEAD
     DataManager *dataManager = [DataManager new];
     NSLog(@"filepath : %@",dataManager.filePath);
     [dataManager openDB];
@@ -30,20 +31,19 @@
     [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
     [dataManager allRowsFromTableNamed:@"Restaurant"];
 
+=======
+>>>>>>> 04031523ab214d9dfa00258065a16e5e0f3cc4ba
 //    //storyboard 이용.
-//    NSString *restaurant1 = [NSString new];
-//    NSString *restaurant2 = [NSString new];
-//    
-//    restaurant1 = @"hello";
-//    restaurant2 = @"world";
-//    
-//    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
-//    
-//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-//    RootTableViewController *tableViewController = navigationController.viewControllers[0];
-//    tableViewController.restaurantsArray = [testArray mutableCopy];
-//    
-//    return YES;
+    RestaurantData *restaurant1 = [[RestaurantData alloc] initWithIndex:0 name: @"KohranThai" number:@"00-000-0000" memo:@"Thai Food Restaurant"];
+    RestaurantData *restaurant2 = [[RestaurantData alloc] initWithIndex:0 name: @"GangNam Restaurant" number:@"00-000-0000" memo:@"Korean Food Restaurant"];
+    
+    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    RootTableViewController *tableViewController = navigationController.viewControllers[0];
+    tableViewController.restaurantsArray = [testArray mutableCopy];
+    
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
