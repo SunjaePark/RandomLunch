@@ -22,7 +22,6 @@
 {
     //데이터베이스 생성
     if (sqlite3_open([[self filePath] UTF8String], &db) != SQLITE_OK){
-
         NSLog(@"Opened sqlite database at %@", self.filePath);
         sqlite3_close(db);
         NSAssert(0, @"Database failed to open.");
@@ -59,17 +58,18 @@
 {
     //열가져오기.
     NSString *qsql = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
-    
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, nil) == SQLITE_OK)
     {
         while(sqlite3_step(statement) == SQLITE_ROW)
         {
             char *field1 = (char *) sqlite3_column_text(statement, 0);
+            NSLog(@"field1 : %@",field1);
+            
             NSString *field1Str = [[NSString alloc] initWithUTF8String:field1];
-            char *field2 = (char *) sqlite3_column_text(statement, 0);
+            char *field2 = (char *) sqlite3_column_text(statement, 1);
             NSString *field2Str = [[NSString alloc] initWithUTF8String:field2];
-            char *field3 = (char *) sqlite3_column_text(statement, 0);
+            char *field3 = (char *) sqlite3_column_text(statement, 2);
             NSString *field3Str = [[NSString alloc] initWithUTF8String:field3];
             
             NSString *str = [[NSString alloc] initWithFormat:@" %@ - %@ - %@ ", field1Str, field2Str, field3Str];
