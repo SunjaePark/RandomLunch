@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DataManager;
+
 @interface RootTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray* restaurantsArray;
-
+@property (strong, nonatomic) DataManager* dataManager;
 @end

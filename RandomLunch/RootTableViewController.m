@@ -8,6 +8,7 @@
 
 #import "RootTableViewController.h"
 #import "DetailViewController.h"
+#import "DataManager.h"
 #import "RestaurantData.h"
 
 @interface RootTableViewController ()
@@ -20,6 +21,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        // dataManager를 여기서 만들어야 하나???;;
+        // DataManager *dataManager = [DataManager alloc];
     }
     return self;
 }
@@ -27,14 +30,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //db로부터 data 읽어서 list에 넣기.
 
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
     
     //random으로 식당을 보여주는 버튼.(button 이름 바꿔야 함.)
-    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
-                                                                                 target:self
-                                                                                 action:@selector(randomLunch)];
+    UIBarButtonItem *randomLunch = [[UIBarButtonItem alloc]initWithTitle:@"Random Lunch"
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:@selector(randomLunch)];
     //식당 추가하는 버튼
     UIBarButtonItem *addRestaurant = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                    target:self
@@ -48,6 +54,8 @@
 {
     //random으로 식당골라서 그 정보를 띄우기.
     int randomIndex = 0;//rand함수 사용해서 random index 골라야함!
+    
+    rand();
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(randomIndex) inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
