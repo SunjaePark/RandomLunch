@@ -64,7 +64,7 @@
         while(sqlite3_step(statement) == SQLITE_ROW)
         {
             char *field1 = (char *) sqlite3_column_text(statement, 0);
-            NSLog(@"field1 : %@",field1);
+            NSLog(@"field1 : %c", *field1);
             
             NSString *field1Str = [[NSString alloc] initWithUTF8String:field1];
             char *field2 = (char *) sqlite3_column_text(statement, 1);

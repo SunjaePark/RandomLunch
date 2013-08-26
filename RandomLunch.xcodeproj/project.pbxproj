@@ -20,6 +20,11 @@
 		575E669717B46194008990C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669617B46194008990C3 /* Default.png */; };
 		575E669917B46194008990C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669817B46194008990C3 /* Default@2x.png */; };
 		575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669A17B46194008990C3 /* Default-568h@2x.png */; };
+		F80623EF17CB425C007D212D /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = F80623EE17CB425C007D212D /* icon2.png */; };
+		F80623F117CB42C9007D212D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F80623F017CB42C9007D212D /* icon.png */; };
+		F80623F317CB4726007D212D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F217CB4726007D212D /* MapKit.framework */; };
+		F80623F517CB4735007D212D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F417CB4735007D212D /* CoreLocation.framework */; };
+		F80623F817CB488E007D212D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80623F717CB488E007D212D /* MapViewController.m */; };
 		F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F807C3FD17C2102A00CCE430 /* DetailViewController.m */; };
 		F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */; };
 		F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8572A3D17B85F1900CE4602 /* RootTableViewController.m */; };
@@ -45,6 +50,12 @@
 		575E669617B46194008990C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		575E669817B46194008990C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		575E669A17B46194008990C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F80623EE17CB425C007D212D /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		F80623F017CB42C9007D212D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F80623F217CB4726007D212D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F80623F417CB4735007D212D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F80623F617CB488E007D212D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F80623F717CB488E007D212D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		F807C3FC17C2102A00CCE430 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F807C3FD17C2102A00CCE430 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RandomLunchStroryBoard.storyboard; sourceTree = "<group>"; };
@@ -57,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80623F517CB4735007D212D /* CoreLocation.framework in Frameworks */,
+				F80623F317CB4726007D212D /* MapKit.framework in Frameworks */,
 				01CBAB6317B85E17002FC770 /* libsqlite3.dylib in Frameworks */,
 				575E668517B46194008990C3 /* UIKit.framework in Frameworks */,
 				575E668717B46194008990C3 /* Foundation.framework in Frameworks */,
@@ -79,6 +92,10 @@
 		575E667817B46194008990C3 = {
 			isa = PBXGroup;
 			children = (
+				F80623F417CB4735007D212D /* CoreLocation.framework */,
+				F80623F217CB4726007D212D /* MapKit.framework */,
+				F80623F017CB42C9007D212D /* icon.png */,
+				F80623EE17CB425C007D212D /* icon2.png */,
 				575E668A17B46194008990C3 /* RandomLunch */,
 				575E668317B46194008990C3 /* Frameworks */,
 				575E668217B46194008990C3 /* Products */,
@@ -141,6 +158,8 @@
 			children = (
 				F807C3FC17C2102A00CCE430 /* DetailViewController.h */,
 				F807C3FD17C2102A00CCE430 /* DetailViewController.m */,
+				F80623F617CB488E007D212D /* MapViewController.h */,
+				F80623F717CB488E007D212D /* MapViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -202,6 +221,8 @@
 				575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */,
 				F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */,
 				016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */,
+				F80623EF17CB425C007D212D /* icon2.png in Resources */,
+				F80623F117CB42C9007D212D /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +239,7 @@
 				016118FB17B9AC320051CDE3 /* RestaurantData.m in Sources */,
 				F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */,
 				0181E8B417C37DC5004932CC /* DataManager.m in Sources */,
+				F80623F817CB488E007D212D /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

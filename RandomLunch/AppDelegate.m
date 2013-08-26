@@ -15,7 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    //storyboard 이용.
+    //storyboard 이용.
     RestaurantData *restaurant1 = [[RestaurantData alloc] initWithIndex:0 name: @"KohranThai" number:@"00-000-0000" memo:@"Thai Food Restaurant"];
     RestaurantData *restaurant2 = [[RestaurantData alloc] initWithIndex:0 name: @"GangNam Restaurant" number:@"00-000-0000" memo:@"Korean Food Restaurant"];
     

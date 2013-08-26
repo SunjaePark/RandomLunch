@@ -22,7 +22,8 @@
     if (self) {
         // Custom initialization
         // dataManager를 여기서 만들어야 하나???;;
-        // DataManager *dataManager = [DataManager alloc];
+        
+        
     }
     return self;
 }
@@ -66,9 +67,9 @@
 {
     //db에 추가할 내용 필요.
     RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2
-                                                                    name:@"No name"
-                                                                  number:@"00-000-0000"
-                                                                    memo:@"No memo"];
+                                                                    name:@"Put a Restaurant name"
+                                                                  number:@"Put a Phone Number(00-000-0000)"
+                                                                    memo:@"Put Information of Restaurant"];
     [self.restaurantsArray addObject:newRestaurant];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];

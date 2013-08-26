@@ -36,17 +36,24 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    self.restaurant.name = self.restaurantName.text;
-    self.restaurant.memo = self.restaurantInformation.text;
-    self.restaurant.number = self.restaurantPhoneNumber.text;
-    
-    //수정된 내용 db에 update해야함.
+    if(![self.restaurantName.text isEqualToString:@"Put a Restaurant name"]) // 내용이 수정 되었으면 저장.
+    {
+        self.restaurant.name = self.restaurantName.text;
+        self.restaurant.memo = self.restaurantInformation.text;
+        self.restaurant.number = self.restaurantPhoneNumber.text;
+        
+        //수정된 내용 db에 update해야함.
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)showMap:(id)sender {
+    
+    NSLog(@"Map will appear");
 }
 
 @end

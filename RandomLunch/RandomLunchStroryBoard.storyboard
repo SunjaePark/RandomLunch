@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="T0l-Pp-0W3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iBl-2V-MO9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -37,7 +37,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGA-Og-uX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="6"/>
+            <point key="canvasLocation" x="1361" y="6"/>
         </scene>
         <!--Detail View Controller - Restaurant-->
         <scene sceneID="tPg-22-cqV">
@@ -67,17 +67,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGk-kf-qtl">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMap:" destination="fn4-O8-uAv" eventType="touchUpInside" id="aCp-IM-5MA"/>
+                                    <segue destination="27u-Bs-9NN" kind="push" id="GyG-AS-4t2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fBj-js-Kr3" firstAttribute="leading" secondItem="xka-xu-Zad" secondAttribute="leading" type="default" id="C57-8l-L0t"/>
-                            <constraint firstAttribute="bottom" secondItem="3R7-Wp-W2O" secondAttribute="bottom" constant="102" id="D5s-RB-yfV"/>
+                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="leading" secondItem="fBj-js-Kr3" secondAttribute="leading" type="default" id="7tl-YU-90c"/>
+                            <constraint firstAttribute="bottom" secondItem="3R7-Wp-W2O" secondAttribute="bottom" constant="116" id="E81-R1-71e"/>
                             <constraint firstAttribute="trailing" secondItem="xka-xu-Zad" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="M6j-vR-dNd"/>
                             <constraint firstAttribute="trailing" secondItem="fBj-js-Kr3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="N53-tc-o5M"/>
                             <constraint firstItem="xka-xu-Zad" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="92" id="bAb-B8-XNd"/>
                             <constraint firstItem="fBj-js-Kr3" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="48" id="bUG-cU-0l4"/>
                             <constraint firstItem="xka-xu-Zad" firstAttribute="leading" secondItem="3R7-Wp-W2O" secondAttribute="leading" type="default" id="bu8-fw-14P"/>
+                            <constraint firstAttribute="bottom" secondItem="iGk-kf-qtl" secondAttribute="bottom" constant="44" id="g4F-Hp-DCJ"/>
                             <constraint firstAttribute="trailing" secondItem="3R7-Wp-W2O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gv7-Hk-52P"/>
+                            <constraint firstItem="iGk-kf-qtl" firstAttribute="centerX" secondItem="3R7-Wp-W2O" secondAttribute="centerX" type="default" id="i4n-NL-Wjl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurant" id="ofR-C8-C3O"/>
@@ -89,35 +105,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCx-dN-zFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="313"/>
+            <point key="canvasLocation" x="1818" y="6"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="lKY-tm-ON6">
+            <objects>
+                <viewController id="27u-Bs-9NN" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RoB-Hx-9rt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-5q-Mg1"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9fh-5q-Mg1" firstAttribute="trailing" secondItem="RoB-Hx-9rt" secondAttribute="trailing" type="default" id="0fT-XK-qlw"/>
+                            <constraint firstItem="9fh-5q-Mg1" firstAttribute="leading" secondItem="RoB-Hx-9rt" secondAttribute="leading" type="default" id="GUo-Ga-qSd"/>
+                            <constraint firstItem="9fh-5q-Mg1" firstAttribute="bottom" secondItem="RoB-Hx-9rt" secondAttribute="bottom" type="default" id="QZN-U6-Tbe"/>
+                            <constraint firstItem="9fh-5q-Mg1" firstAttribute="top" secondItem="RoB-Hx-9rt" secondAttribute="top" type="default" id="zHO-aM-OOz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BxI-yg-BVq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwM-0A-5xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2251" y="6"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Sy6-c2-qAr">
+        <scene sceneID="w8O-TA-9Xt">
             <objects>
-                <navigationController id="T0l-Pp-0W3" sceneMemberID="viewController">
+                <navigationController id="iBl-2V-MO9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5f8-fU-u6O">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMI-uE-Ivb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="o2e-CQ-rId" kind="relationship" relationship="rootViewController" id="Vp2-n7-x0m"/>
+                        <segue destination="o2e-CQ-rId" kind="relationship" relationship="rootViewController" id="6Mu-m0-bLP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BTe-LZ-lCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBH-0n-25b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="6"/>
+            <point key="canvasLocation" x="835" y="6"/>
         </scene>
     </scenes>
     <classes>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="showMap:"/>
                 <relationship kind="outlet" name="restaurantInformation" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="restaurantName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="restaurantPhoneNumber" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
