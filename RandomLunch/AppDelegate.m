@@ -16,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     DataManager *dataManager = [DataManager new];
+    NSLog(@"filepath : %@",dataManager.filePath);
     [dataManager openDB];
     [dataManager createTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo"];
     NSString *name = @"KohranThai";
