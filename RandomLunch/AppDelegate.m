@@ -17,7 +17,7 @@
 {
     DataManager *dataManager = [DataManager new];
     [dataManager openDB];
-    [dataManager createTableNamed:@"Restaurant" withField1:@"name" withField2:@"number" withField3:@"memo"];
+    [dataManager createTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo"];
     NSString *name = @"KohranThai";
     NSString *number = @"010-8999-7677";
     NSString *memo = @"Thai Restaurant";
@@ -27,7 +27,7 @@
 
     [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
     [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
-    [dataManager getAllRowsFromTableNamed:@"Restaurant"];
+    [dataManager allRowsFromTableNamed:@"Restaurant"];
 
 //    //storyboard 이용.
 //    NSString *restaurant1 = [NSString new];

@@ -22,12 +22,14 @@
 {
     //데이터베이스 생성
     if (sqlite3_open([[self filePath] UTF8String], &db) != SQLITE_OK){
+
+        NSLog(@"Opened sqlite database at %@", self.filePath);
         sqlite3_close(db);
         NSAssert(0, @"Database failed to open.");
     }
 }
 
-- (void) createTableNamed:(NSString *) tableName withField1:(NSString *) field1 withField2:(NSString *) field2 withField3:(NSString *) field3
+- (void) createTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3
 {
     char *err;
     //SQL문
@@ -53,7 +55,7 @@
     }
 }
 
-- (void) getAllRowsFromTableNamed: (NSString *) tableName
+- (void) allRowsFromTableNamed: (NSString *) tableName
 {
     //열가져오기.
     NSString *qsql = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
