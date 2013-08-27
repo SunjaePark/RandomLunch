@@ -31,12 +31,8 @@
     
     self.dataManager = [DataManager new];
     [self.dataManager openDB];
-    
-    //가져오는게 문제다........................................ ㅜㅜ
+    //가져오는것 해결!
     self.restaurantsArray = [self.dataManager allRowsFromTableNamed:@"Restaurant"];
-    
-    RestaurantData *test = [self.restaurantsArray objectAtIndex:0];
-    NSLog(@"self.restaurantsArray's name: %@\n ",test.name);
     
     [super viewDidLoad];
 
