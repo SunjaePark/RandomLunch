@@ -21,10 +21,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        // dataManager를 여기서 만들어야 하나???;;
-        
-        
-    }
+        // dataManager를 여기서 만들어야 하나???;
+            }
     return self;
 }
 
@@ -33,6 +31,7 @@
     [super viewDidLoad];
     
     //db로부터 data 읽어서 list에 넣기.
+
 
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;

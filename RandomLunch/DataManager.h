@@ -29,7 +29,7 @@
 - (void) insertRecordIntoTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3 field1Value:(NSString *) field1Value field2Value:(NSString *) field2Value field3Value:(NSString *) field3Value;
 
 //레코드 가져오기
-- (void) allRowsFromTableNamed: (NSString *) tableName;
+- (void) allRowsFromTableNamed: (NSString *)tableName tableList:(NSMutableArray *)tableList;
 
 
 //+ (id)defaultManager;

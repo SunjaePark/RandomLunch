@@ -44,7 +44,7 @@
 - (void) insertRecordIntoTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3 field1Value:(NSString *) field1Value field2Value:(NSString *) field2Value field3Value:(NSString *) field3Value
 {
     //SQL문
-    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@') VALUES ('%@','%@','%@')", tableName,field2, field2,field3,field1Value,field2Value,field3Value ];
+    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@') VALUES ('%@','%@','%@')", tableName,field1, field2,field3,field1Value,field2Value,field3Value ];
     
     char *err;
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK)
@@ -54,25 +54,24 @@
     }
 }
 
-- (void) allRowsFromTableNamed: (NSString *) tableName
+- (void) allRowsFromTableNamed: (NSString *)tableName tableList:(NSMutableArray *)tableList
 {
     //열가져오기.
+    NSLog(@"tableName : %@", tableName);
     NSString *qsql = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
+    NSLog(@"qsql : %@", qsql);
     sqlite3_stmt *statement;
+    
     if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, nil) == SQLITE_OK)
     {
         while(sqlite3_step(statement) == SQLITE_ROW)
         {
-            char *field1 = (char *) sqlite3_column_text(statement, 0);
-            NSLog(@"field1 : %c", *field1);
+            NSString *field1Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 0)];
+            NSString *field2Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)];
+            NSString *field3Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             
-            NSString *field1Str = [[NSString alloc] initWithUTF8String:field1];
-            char *field2 = (char *) sqlite3_column_text(statement, 1);
-            NSString *field2Str = [[NSString alloc] initWithUTF8String:field2];
-            char *field3 = (char *) sqlite3_column_text(statement, 2);
-            NSString *field3Str = [[NSString alloc] initWithUTF8String:field3];
-            
-            NSString *str = [[NSString alloc] initWithFormat:@" %@ - %@ - %@ ", field1Str, field2Str, field3Str];
+            NSString *str = [[NSString alloc] initWithFormat:@"%@ - %@ - %@ ",field1Str, field2Str, field3Str];
+            [tableList addObject:str];
             NSLog(@"%@", str);
         }
         // 메모리에 쌓인 쿼리문 삭제
