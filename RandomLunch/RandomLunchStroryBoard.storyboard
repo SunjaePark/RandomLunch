@@ -31,9 +31,7 @@
                             <outlet property="delegate" destination="o2e-CQ-rId" id="Hsc-RX-Dud"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AZn-MA-nIs">
-                        <barButtonItem key="leftBarButtonItem" title="Random!" id="9vf-od-EXl"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="AZn-MA-nIs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGA-Og-uX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +152,6 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
-                <relationship kind="action" name="showMap:"/>
                 <relationship kind="outlet" name="restaurantInformation" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="restaurantName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="restaurantPhoneNumber" candidateClass="UITextField"/>

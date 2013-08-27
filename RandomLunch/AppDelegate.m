@@ -15,32 +15,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSMutableArray *test = [NSMutableArray new];
+//    NSMutableArray *test = [NSMutableArray new];
 //
-    DataManager *dataManager = [DataManager new];
-    NSLog(@"filepath : %@",dataManager.filePath);
-    [dataManager openDB];
-    [dataManager createTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo"];
-    NSString *name = @"KohranThai";
-    NSString *number = @"010-8999-7677";
-    NSString *memo = @"Thai Restaurant";
-    NSString *name2 = @"GangNam Market";
-    NSString *number2 = @"02-999-7677";
-    NSString *memo2 = @"Korean Restaurant";
+//    DataManager *dataManager = [DataManager new];
+//    NSLog(@"filepath : %@",dataManager.filePath);
+//    [dataManager openDB];
+//    [dataManager createTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo"];
+//    NSString *name = @"KohranThai";
+//    NSString *number = @"010-8999-7677";
+//    NSString *memo = @"Thai Restaurant";
+//    NSString *name2 = @"GangNam Market";
+//    NSString *number2 = @"02-999-7677";
+//    NSString *memo2 = @"Korean Restaurant";
+//
+//    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
+//    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
+//    [dataManager allRowsFromTableNamed:@"Restaurant"tableList:test];
 
-    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name field2Value:number field3Value:memo];
-    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
-    [dataManager allRowsFromTableNamed:@"Restaurant"tableList:test];
-
-////    //storyboard 이용.
+    //storyboard 이용.
 //    RestaurantData *restaurant1 = [[RestaurantData alloc] initWithIndex:0 name: @"KohranThai" number:@"00-000-0000" memo:@"Thai Food Restaurant"];
 //    RestaurantData *restaurant2 = [[RestaurantData alloc] initWithIndex:0 name: @"GangNam Restaurant" number:@"00-000-0000" memo:@"Korean Food Restaurant"];
 //    
 //    NSArray *testArray = [NSArray arrayWithObjects:restaurant1, restaurant2, nil];
 //    
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    RootTableViewController *tableViewController = navigationController.viewControllers[0];
-    tableViewController.restaurantsArray = test;
+//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    RootTableViewController *tableViewController = navigationController.viewControllers[0];
+//    tableViewController.restaurantsArray = test;
     
     return YES;
 }

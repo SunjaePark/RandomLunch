@@ -20,14 +20,14 @@
 		575E669717B46194008990C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669617B46194008990C3 /* Default.png */; };
 		575E669917B46194008990C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669817B46194008990C3 /* Default@2x.png */; };
 		575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669A17B46194008990C3 /* Default-568h@2x.png */; };
-		F80623EF17CB425C007D212D /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = F80623EE17CB425C007D212D /* icon2.png */; };
-		F80623F117CB42C9007D212D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F80623F017CB42C9007D212D /* icon.png */; };
 		F80623F317CB4726007D212D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F217CB4726007D212D /* MapKit.framework */; };
 		F80623F517CB4735007D212D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F417CB4735007D212D /* CoreLocation.framework */; };
 		F80623F817CB488E007D212D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80623F717CB488E007D212D /* MapViewController.m */; };
 		F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F807C3FD17C2102A00CCE430 /* DetailViewController.m */; };
 		F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */; };
 		F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8572A3D17B85F1900CE4602 /* RootTableViewController.m */; };
+		F8CCFEEC17CC449D00ED2A8B /* Restaurants2.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */; };
+		F8CCFEEE17CC44A500ED2A8B /* Restaurants1.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +50,6 @@
 		575E669617B46194008990C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		575E669817B46194008990C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		575E669A17B46194008990C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F80623EE17CB425C007D212D /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
-		F80623F017CB42C9007D212D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		F80623F217CB4726007D212D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F80623F417CB4735007D212D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F80623F617CB488E007D212D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RandomLunchStroryBoard.storyboard; sourceTree = "<group>"; };
 		F8572A3C17B85F1900CE4602 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		F8572A3D17B85F1900CE4602 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants2.png; sourceTree = "<group>"; };
+		F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +92,10 @@
 		575E667817B46194008990C3 = {
 			isa = PBXGroup;
 			children = (
+				F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */,
+				F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */,
 				F80623F417CB4735007D212D /* CoreLocation.framework */,
 				F80623F217CB4726007D212D /* MapKit.framework */,
-				F80623F017CB42C9007D212D /* icon.png */,
-				F80623EE17CB425C007D212D /* icon2.png */,
 				575E668A17B46194008990C3 /* RandomLunch */,
 				575E668317B46194008990C3 /* Frameworks */,
 				575E668217B46194008990C3 /* Products */,
@@ -221,8 +221,8 @@
 				575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */,
 				F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */,
 				016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */,
-				F80623EF17CB425C007D212D /* icon2.png in Resources */,
-				F80623F117CB42C9007D212D /* icon.png in Resources */,
+				F8CCFEEC17CC449D00ED2A8B /* Restaurants2.png in Resources */,
+				F8CCFEEE17CC44A500ED2A8B /* Restaurants1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

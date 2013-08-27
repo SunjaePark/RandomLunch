@@ -7,6 +7,7 @@
 //
 
 #import "DataManager.h"
+#import "RestaurantData.h" //allRowFromTable에서 바로 restaurantData 가져오려고.
 #import <sqlite3.h>
 
 @implementation DataManager
@@ -41,7 +42,13 @@
     }
 }
 
-- (void) insertRecordIntoTableNamed:(NSString *) tableName withField1:(NSString *) field1 field2:(NSString *) field2 field3:(NSString *) field3 field1Value:(NSString *) field1Value field2Value:(NSString *) field2Value field3Value:(NSString *) field3Value
+- (void) insertRecordIntoTableNamed:(NSString *) tableName
+                         withField1:(NSString *) field1
+                             field2:(NSString *) field2
+                             field3:(NSString *) field3
+                        field1Value:(NSString *) field1Value
+                        field2Value:(NSString *) field2Value
+                        field3Value:(NSString *) field3Value
 {
     //SQL문
     NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@') VALUES ('%@','%@','%@')", tableName,field1, field2,field3,field1Value,field2Value,field3Value ];
@@ -54,8 +61,9 @@
     }
 }
 
-- (void) allRowsFromTableNamed: (NSString *)tableName tableList:(NSMutableArray *)tableList
+- (NSMutableArray *) allRowsFromTableNamed: (NSString *)tableName
 {
+    NSMutableArray *tableRow = [NSMutableArray new];
     //열가져오기.
     NSLog(@"tableName : %@", tableName);
     NSString *qsql = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
@@ -70,13 +78,20 @@
             NSString *field2Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)];
             NSString *field3Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             
-            NSString *str = [[NSString alloc] initWithFormat:@"%@ - %@ - %@ ",field1Str, field2Str, field3Str];
-            [tableList addObject:str];
+            RestaurantData *restaurant = [[RestaurantData alloc]initWithIndex:tableRow.count
+                                                                         name:field1Str
+                                                                       number:field2Str
+                                                                         memo:field3Str];
+            [tableRow addObject:restaurant];
+            NSString *str = [[NSString alloc] initWithFormat:@"In while loop, %@ - %@ - %@ ",field1Str, field2Str, field3Str];
             NSLog(@"%@", str);
         }
+        
         // 메모리에 쌓인 쿼리문 삭제
         sqlite3_finalize(statement);
     }
+    
+    return tableRow;
 }
 
 @end

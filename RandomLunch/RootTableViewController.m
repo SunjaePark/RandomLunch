@@ -28,10 +28,17 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     
-    //db로부터 data 읽어서 list에 넣기.
-
+    self.dataManager = [DataManager new];
+    [self.dataManager openDB];
+    
+    //가져오는게 문제다........................................ ㅜㅜ
+    self.restaurantsArray = [self.dataManager allRowsFromTableNamed:@"Restaurant"];
+    
+    RestaurantData *test = [self.restaurantsArray objectAtIndex:0];
+    NSLog(@"self.restaurantsArray's name: %@\n ",test.name);
+    
+    [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
@@ -53,9 +60,7 @@
 - (void)randomLunch
 {
     //random으로 식당골라서 그 정보를 띄우기.
-    int randomIndex = 0;//rand함수 사용해서 random index 골라야함!
-    
-    rand();
+    int randomIndex = (rand() % self.restaurantsArray.count);
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(randomIndex) inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
