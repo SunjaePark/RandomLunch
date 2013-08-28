@@ -94,8 +94,6 @@
 			children = (
 				F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */,
 				F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */,
-				F80623F417CB4735007D212D /* CoreLocation.framework */,
-				F80623F217CB4726007D212D /* MapKit.framework */,
 				575E668A17B46194008990C3 /* RandomLunch */,
 				575E668317B46194008990C3 /* Frameworks */,
 				575E668217B46194008990C3 /* Products */,
@@ -113,6 +111,8 @@
 		575E668317B46194008990C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F80623F417CB4735007D212D /* CoreLocation.framework */,
+				F80623F217CB4726007D212D /* MapKit.framework */,
 				01CBAB6217B85E17002FC770 /* libsqlite3.dylib */,
 				575E668417B46194008990C3 /* UIKit.framework */,
 				575E668617B46194008990C3 /* Foundation.framework */,

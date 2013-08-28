@@ -50,18 +50,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="1HE-wW-k0C"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vol</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="restaurant's name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-js-Kr3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put restaurant's name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-js-Kr3">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="277" id="5W0-RB-WZ2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phone number" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-Wp-W2O">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put restaurant's phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-Wp-W2O">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -94,7 +93,13 @@
                             <constraint firstItem="iGk-kf-qtl" firstAttribute="centerX" secondItem="3R7-Wp-W2O" secondAttribute="centerX" type="default" id="i4n-NL-Wjl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurant" id="ofR-C8-C3O"/>
+                    <navigationItem key="navigationItem" title="Restaurant" id="ofR-C8-C3O">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sXG-lD-LZx">
+                            <connections>
+                                <action selector="saveRestaurant:" destination="fn4-O8-uAv" id="nc6-lH-Rya"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="restaurantInformation" destination="xka-xu-Zad" id="Tvv-86-hOP"/>
                         <outlet property="restaurantName" destination="fBj-js-Kr3" id="5Ev-cL-uYC"/>
@@ -152,6 +157,8 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="saveRestaurant:"/>
+                <relationship kind="action" name="showMap:"/>
                 <relationship kind="outlet" name="restaurantInformation" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="restaurantName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="restaurantPhoneNumber" candidateClass="UITextField"/>

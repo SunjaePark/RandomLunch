@@ -66,15 +66,15 @@
 - (void) addRestaurant
 {
     //db에 추가할 내용 필요.
-    RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2
-                                                                    name:@"Put a Restaurant name"
-                                                                  number:@"Put a Phone Number(00-000-0000)"
-                                                                    memo:@"Put Information of Restaurant"];
-    [self.restaurantsArray addObject:newRestaurant];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+//    RestaurantData *newRestaurant = [[RestaurantData alloc]initWithIndex:2
+//                                                                    name:@"Put a Restaurant name"
+//                                                                  number:@"Put a Phone Number(00-000-0000)"
+//                                                                    memo:@"Put Information of Restaurant"];
+//    [self.restaurantsArray addObject:newRestaurant];
+//    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.restaurantsArray.count - 1) inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
     [self performSegueWithIdentifier:@"DetailOfRestaurantSegue" sender:self];
 }
 
@@ -140,9 +140,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    RestaurantData *restaurantData = self.restaurantsArray[self.tableView.indexPathForSelectedRow.row];
-    DetailViewController *restaurantDetailViewController = segue.destinationViewController;
-    restaurantDetailViewController.restaurant = restaurantData;
+    
+    if (self.tableView.indexPathForSelectedRow)
+    {
+        RestaurantData *restaurantData = self.restaurantsArray[self.tableView.indexPathForSelectedRow.row];
+        DetailViewController *restaurantDetailViewController = segue.destinationViewController;
+        restaurantDetailViewController.restaurant = restaurantData;
+    }   
 }
 
 @end
