@@ -32,6 +32,7 @@
 //    [dataManager insertRecordIntoTableNamed:@"Restaurant" withField1:@"name" field2:@"number" field3:@"memo" field1Value:name2 field2Value:number2 field3Value:memo2];
 //    [dataManager allRowsFromTableNamed:@"Restaurant"tableList:test];
 
+
     //storyboard 이용.
 //    RestaurantData *restaurant1 = [[RestaurantData alloc] initWithIndex:0 name: @"KohranThai" number:@"00-000-0000" memo:@"Thai Food Restaurant"];
 //    RestaurantData *restaurant2 = [[RestaurantData alloc] initWithIndex:0 name: @"GangNam Restaurant" number:@"00-000-0000" memo:@"Korean Food Restaurant"];
