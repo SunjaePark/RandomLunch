@@ -8,7 +8,7 @@
 
 #import "RootTableViewController.h"
 #import "DetailViewController.h"
-#import "DataManager.h"
+#import "RestaurantController.h"
 #import "RestaurantData.h"
 
 @interface RootTableViewController ()
@@ -23,16 +23,6 @@
         // Custom initialization
     }
     return self;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    //db reload 여기서 함.
-    
-    self.dataManager = [DataManager new];
-    [self.dataManager openDB];
-    //가져오는것 해결!
-    self.restaurantsArray = [self.dataManager allRowsFromTableNamed:@"Restaurant"];
 }
 
 - (void)viewDidLoad
@@ -54,6 +44,13 @@
 
     self.navigationItem.rightBarButtonItem = addRestaurant;
     self.navigationItem.leftBarButtonItem = randomLunch;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.restaurantsArray = [[RestaurantController sharedInstance].allRestaurant mutableCopy];
 }
 
 - (void)randomLunch

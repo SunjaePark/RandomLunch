@@ -16,6 +16,8 @@
     sqlite3 *db;
 }
 
++ (DataManager *)defaultManager;
+
 //데이터베이스의 전체 경로 반환
 - (NSString *) filePath;
 

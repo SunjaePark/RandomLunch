@@ -20,6 +20,7 @@
 		575E669717B46194008990C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669617B46194008990C3 /* Default.png */; };
 		575E669917B46194008990C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669817B46194008990C3 /* Default@2x.png */; };
 		575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E669A17B46194008990C3 /* Default-568h@2x.png */; };
+		57FE7A6F17CF8267008671AD /* RestaurantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FE7A6E17CF8267008671AD /* RestaurantController.m */; };
 		F80623F317CB4726007D212D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F217CB4726007D212D /* MapKit.framework */; };
 		F80623F517CB4735007D212D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F417CB4735007D212D /* CoreLocation.framework */; };
 		F80623F817CB488E007D212D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80623F717CB488E007D212D /* MapViewController.m */; };
@@ -50,6 +51,8 @@
 		575E669617B46194008990C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		575E669817B46194008990C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		575E669A17B46194008990C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		57FE7A6D17CF8267008671AD /* RestaurantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantController.h; sourceTree = "<group>"; };
+		57FE7A6E17CF8267008671AD /* RestaurantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantController.m; sourceTree = "<group>"; };
 		F80623F217CB4726007D212D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F80623F417CB4735007D212D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F80623F617CB488E007D212D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			children = (
 				016118F917B9AC320051CDE3 /* RestaurantData.h */,
 				016118FA17B9AC320051CDE3 /* RestaurantData.m */,
+				57FE7A6D17CF8267008671AD /* RestaurantController.h */,
+				57FE7A6E17CF8267008671AD /* RestaurantController.m */,
 			);
 			name = RestaurantData;
 			sourceTree = "<group>";
@@ -124,8 +129,7 @@
 		575E668A17B46194008990C3 /* RandomLunch */ = {
 			isa = PBXGroup;
 			children = (
-				0181E8B217C37DC5004932CC /* DataManager.h */,
-				0181E8B317C37DC5004932CC /* DataManager.m */,
+				57FE7A6B17CF8237008671AD /* DB */,
 				575E669317B46194008990C3 /* AppDelegate.h */,
 				575E669417B46194008990C3 /* AppDelegate.m */,
 				575E668B17B46194008990C3 /* Supporting Files */,
@@ -151,6 +155,15 @@
 				575E669A17B46194008990C3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57FE7A6B17CF8237008671AD /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				0181E8B217C37DC5004932CC /* DataManager.h */,
+				0181E8B317C37DC5004932CC /* DataManager.m */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 		F80D441517C2DBCA0063D5EF /* View */ = {
@@ -240,6 +253,7 @@
 				F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */,
 				0181E8B417C37DC5004932CC /* DataManager.m in Sources */,
 				F80623F817CB488E007D212D /* MapViewController.m in Sources */,
+				57FE7A6F17CF8267008671AD /* RestaurantController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

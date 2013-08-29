@@ -7,14 +7,36 @@
 //
 
 #import "DataManager.h"
+// TODO: RestaurantData 관련 코드 제거
 #import "RestaurantData.h" //allRowFromTable에서 바로 restaurantData 가져오려고.
 #import <sqlite3.h>
 
 @implementation DataManager
 
+static DataManager *instance = nil;
+
++ (DataManager *)defaultManager
+{
+	@synchronized( [DataManager class] ) {
+        if( instance == nil )
+            instance = [[self class] new];
+        
+        return instance;
+    }
+    return nil;
+}
+
+- (id)init
+{
+    if ( self = [super init] ) {
+        [self openDB];
+    }
+    return self;
+}
+
 - (NSString *) filePath
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
     return [documentsDir stringByAppendingPathComponent:@"database.sql"];
 }
@@ -78,6 +100,7 @@
             NSString *field2Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)];
             NSString *field3Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             
+            // TODO: Raw Data로 정리하여 반환
             RestaurantData *restaurant = [[RestaurantData alloc]initWithIndex:tableRow.count
                                                                          name:field1Str
                                                                        number:field2Str
