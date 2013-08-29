@@ -7,6 +7,7 @@
 //
 
 #import "DataManager.h"
+// TODO: RestaurantData 관련 코드 제거
 #import "RestaurantData.h" //allRowFromTable에서 바로 restaurantData 가져오려고.
 #import <sqlite3.h>
 
@@ -99,6 +100,7 @@ static DataManager *instance = nil;
             NSString *field2Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)];
             NSString *field3Str = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             
+            // TODO: Raw Data로 정리하여 반환
             RestaurantData *restaurant = [[RestaurantData alloc]initWithIndex:tableRow.count
                                                                          name:field1Str
                                                                        number:field2Str
