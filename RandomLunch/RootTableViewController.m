@@ -28,11 +28,8 @@
 
 - (void)viewDidLoad
 {
-    
-    self.dataManager = [DataManager new];
-    [self.dataManager openDB];
     //가져오는것 해결!
-    self.restaurantsArray = [self.dataManager allRowsFromTableNamed:@"Restaurant"];
+    self.restaurantsArray = [[DataManager defaultManager] allRowsFromTableNamed:@"Restaurant"];
     
     [super viewDidLoad];
 

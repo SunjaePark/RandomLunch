@@ -12,6 +12,27 @@
 
 @implementation DataManager
 
+static DataManager *instance = nil;
+
++ (DataManager *)defaultManager
+{
+	@synchronized( [DataManager class] ) {
+        if( instance == nil )
+            instance = [[self class] new];
+        
+        return instance;
+    }
+    return nil;
+}
+
+- (id)init
+{
+    if ( self = [super init] ) {
+        [self openDB];
+    }
+    return self;
+}
+
 - (NSString *) filePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
