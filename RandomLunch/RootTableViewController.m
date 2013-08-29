@@ -8,7 +8,7 @@
 
 #import "RootTableViewController.h"
 #import "DetailViewController.h"
-#import "DataManager.h"
+#import "RestaurantController.h"
 #import "RestaurantData.h"
 
 @interface RootTableViewController ()
@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     //가져오는것 해결!
-    self.restaurantsArray = [[DataManager defaultManager] allRowsFromTableNamed:@"Restaurant"];
+    self.restaurantsArray = [[RestaurantController sharedInstance].allRestaurant mutableCopy];
     
     [super viewDidLoad];
 
