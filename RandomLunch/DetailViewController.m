@@ -39,6 +39,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)showMap:(id)sender {
     
     NSLog(@"Map will appear");
@@ -46,9 +47,14 @@
 
 - (IBAction)saveRestaurant:(id)sender
 {
-    self.restaurant.name = self.restaurantName.text;
-    self.restaurant.memo = self.restaurantInformation.text;
-    self.restaurant.number = self.restaurantPhoneNumber.text;
+    if ([self.restaurantName.text length] != 0)
+    {
+        self.restaurant.name = self.restaurantName.text;
+        self.restaurant.memo = self.restaurantInformation.text;
+        self.restaurant.number = self.restaurantPhoneNumber.text;
+        
+        //db에 insert해야 함.
+    }
 }
 
 
