@@ -14,7 +14,7 @@
 
 - (NSString *) filePath
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
     return [documentsDir stringByAppendingPathComponent:@"database.sql"];
 }
