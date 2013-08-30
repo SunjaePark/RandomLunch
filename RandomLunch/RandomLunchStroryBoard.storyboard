@@ -45,26 +45,44 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-lD-CIF">
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFakeTouchBackground:" destination="fn4-O8-uAv" eventType="touchUpInside" id="VQh-Ew-KGD"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xka-xu-Zad">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="248" id="1HE-wW-k0C"/>
+                                    <constraint firstAttribute="height" constant="206" id="eJS-Q0-GaS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put restaurant's name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-js-Kr3">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="277" id="5W0-RB-WZ2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put restaurant's phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-Wp-W2O">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="yd6-YW-JRV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGk-kf-qtl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="cbx-kr-aXS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Map">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,16 +99,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="leading" secondItem="fBj-js-Kr3" secondAttribute="leading" type="default" id="7tl-YU-90c"/>
-                            <constraint firstAttribute="bottom" secondItem="3R7-Wp-W2O" secondAttribute="bottom" constant="116" id="E81-R1-71e"/>
-                            <constraint firstAttribute="trailing" secondItem="xka-xu-Zad" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="M6j-vR-dNd"/>
-                            <constraint firstAttribute="trailing" secondItem="fBj-js-Kr3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="N53-tc-o5M"/>
-                            <constraint firstItem="xka-xu-Zad" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="92" id="bAb-B8-XNd"/>
-                            <constraint firstItem="fBj-js-Kr3" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="48" id="bUG-cU-0l4"/>
-                            <constraint firstItem="xka-xu-Zad" firstAttribute="leading" secondItem="3R7-Wp-W2O" secondAttribute="leading" type="default" id="bu8-fw-14P"/>
-                            <constraint firstAttribute="bottom" secondItem="iGk-kf-qtl" secondAttribute="bottom" constant="44" id="g4F-Hp-DCJ"/>
-                            <constraint firstAttribute="trailing" secondItem="3R7-Wp-W2O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gv7-Hk-52P"/>
-                            <constraint firstItem="iGk-kf-qtl" firstAttribute="centerX" secondItem="3R7-Wp-W2O" secondAttribute="centerX" type="default" id="i4n-NL-Wjl"/>
+                            <constraint firstAttribute="trailing" secondItem="fBj-js-Kr3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6FI-pA-AaN"/>
+                            <constraint firstItem="5yO-lD-CIF" firstAttribute="bottom" secondItem="vVQ-WF-nbg" secondAttribute="bottom" type="default" id="86i-RL-QmC"/>
+                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="leading" secondItem="xka-xu-Zad" secondAttribute="leading" type="default" id="AfZ-At-zaF"/>
+                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="trailing" secondItem="xka-xu-Zad" secondAttribute="trailing" type="default" id="BzI-Ju-ZOa"/>
+                            <constraint firstItem="fBj-js-Kr3" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JPu-fD-VqC"/>
+                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="leading" secondItem="vVQ-WF-nbg" secondAttribute="leading" constant="25" id="LwT-Vb-wKV"/>
+                            <constraint firstItem="iGk-kf-qtl" firstAttribute="centerX" secondItem="fBj-js-Kr3" secondAttribute="centerX" type="default" id="Njc-yF-Uns"/>
+                            <constraint firstItem="5yO-lD-CIF" firstAttribute="top" secondItem="vVQ-WF-nbg" secondAttribute="top" type="default" id="TTd-a4-HeK"/>
+                            <constraint firstItem="3R7-Wp-W2O" firstAttribute="top" secondItem="xka-xu-Zad" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yzx-h1-nnL"/>
+                            <constraint firstItem="fBj-js-Kr3" firstAttribute="leading" secondItem="vVQ-WF-nbg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bsx-2A-Cd0"/>
+                            <constraint firstItem="iGk-kf-qtl" firstAttribute="top" secondItem="3R7-Wp-W2O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cdg-dQ-QP2"/>
+                            <constraint firstItem="xka-xu-Zad" firstAttribute="top" secondItem="fBj-js-Kr3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eGP-YM-OWy"/>
+                            <constraint firstItem="5yO-lD-CIF" firstAttribute="leading" secondItem="vVQ-WF-nbg" secondAttribute="leading" type="default" id="lkq-lW-wEZ"/>
+                            <constraint firstItem="5yO-lD-CIF" firstAttribute="trailing" secondItem="vVQ-WF-nbg" secondAttribute="trailing" type="default" id="wlA-aF-rnK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurant" id="ofR-C8-C3O">
@@ -157,6 +179,7 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="onFakeTouchBackground:"/>
                 <relationship kind="action" name="saveRestaurant:"/>
                 <relationship kind="action" name="showMap:"/>
                 <relationship kind="outlet" name="restaurantInformation" candidateClass="UITextView"/>

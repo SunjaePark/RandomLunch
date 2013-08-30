@@ -58,7 +58,7 @@ static RestaurantController *instance = nil;
 {
     NSArray *restaurants = nil;
     
-    NSArray *rawResult = [[DataManager defaultManager] allRowsFromTableNamed:TABLE_RESTAURANT];
+    //NSArray *rawResult = [[DataManager defaultManager] allRowsFromTableNamed:TABLE_RESTAURANT];
     
     // Raw Data to Restaurant Data
     

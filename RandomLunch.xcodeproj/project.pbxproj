@@ -25,10 +25,10 @@
 		F80623F517CB4735007D212D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80623F417CB4735007D212D /* CoreLocation.framework */; };
 		F80623F817CB488E007D212D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80623F717CB488E007D212D /* MapViewController.m */; };
 		F807C3FE17C2102A00CCE430 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F807C3FD17C2102A00CCE430 /* DetailViewController.m */; };
+		F818D8E417D00F6900FD8B2B /* Restaurants2.png in Resources */ = {isa = PBXBuildFile; fileRef = F818D8E317D00F6900FD8B2B /* Restaurants2.png */; };
+		F818D8E617D00F6D00FD8B2B /* Restaurants1.png in Resources */ = {isa = PBXBuildFile; fileRef = F818D8E517D00F6D00FD8B2B /* Restaurants1.png */; };
 		F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */; };
 		F8572A3E17B85F1900CE4602 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8572A3D17B85F1900CE4602 /* RootTableViewController.m */; };
-		F8CCFEEC17CC449D00ED2A8B /* Restaurants2.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */; };
-		F8CCFEEE17CC44A500ED2A8B /* Restaurants1.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,11 +59,11 @@
 		F80623F717CB488E007D212D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		F807C3FC17C2102A00CCE430 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F807C3FD17C2102A00CCE430 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F818D8E317D00F6900FD8B2B /* Restaurants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants2.png; sourceTree = "<group>"; };
+		F818D8E517D00F6D00FD8B2B /* Restaurants1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants1.png; sourceTree = "<group>"; };
 		F850482E17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RandomLunchStroryBoard.storyboard; sourceTree = "<group>"; };
 		F8572A3C17B85F1900CE4602 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		F8572A3D17B85F1900CE4602 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
-		F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants2.png; sourceTree = "<group>"; };
-		F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurants1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		575E667817B46194008990C3 = {
 			isa = PBXGroup;
 			children = (
-				F8CCFEED17CC44A500ED2A8B /* Restaurants1.png */,
-				F8CCFEEB17CC449D00ED2A8B /* Restaurants2.png */,
+				F818D8E517D00F6D00FD8B2B /* Restaurants1.png */,
+				F818D8E317D00F6900FD8B2B /* Restaurants2.png */,
 				575E668A17B46194008990C3 /* RandomLunch */,
 				575E668317B46194008990C3 /* Frameworks */,
 				575E668217B46194008990C3 /* Products */,
@@ -234,8 +234,8 @@
 				575E669B17B46194008990C3 /* Default-568h@2x.png in Resources */,
 				F850482F17B85CC7007CD078 /* RandomLunchStroryBoard.storyboard in Resources */,
 				016118F817B9AA620051CDE3 /* RandomLunchDB.db in Resources */,
-				F8CCFEEC17CC449D00ED2A8B /* Restaurants2.png in Resources */,
-				F8CCFEEE17CC44A500ED2A8B /* Restaurants1.png in Resources */,
+				F818D8E417D00F6900FD8B2B /* Restaurants2.png in Resources */,
+				F818D8E617D00F6D00FD8B2B /* Restaurants1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

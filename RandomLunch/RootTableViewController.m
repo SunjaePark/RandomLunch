@@ -48,19 +48,23 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
     
     self.restaurantsArray = [[RestaurantController sharedInstance].allRestaurant mutableCopy];
+    [super viewWillAppear:animated];
 }
 
 - (void)randomLunch
 {
     //random으로 식당골라서 그 정보를 띄우기.
-    int randomIndex = (rand() % self.restaurantsArray.count);
+    if (self.restaurantsArray.count != 0)
+    {
+        int randomIndex = (rand() % self.restaurantsArray.count);
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(randomIndex) inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-    [self performSegueWithIdentifier:@"DetailOfRestaurantSegue" sender:self];
+    
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(randomIndex) inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        [self performSegueWithIdentifier:@"DetailOfRestaurantSegue" sender:self];
+    }
 }
 
 - (void) addRestaurant
